@@ -56,8 +56,8 @@ def view_issued_book(request):
         days = (date.today()-i.issued_date)
         d=days.days
         fine=0
-        if d>14:
-            day=d-14
+        if d>25:
+            day=d-25
             fine=day*5
         books = list(models.Book.objects.filter(isbn=i.isbn))
         students = list(models.Student.objects.filter(user=i.student_id))
@@ -84,8 +84,8 @@ def student_issued_books(request):
         days=(date.today()-i.issued_date)
         d=days.days
         fine=0
-        if d>15:
-            day=d-14
+        if d>26:
+            day=d-25
             fine=day*5
         t=(issuedBooks[0].issued_date, issuedBooks[0].expiry_date, fine)
         li2.append(t)
