@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='issuedbook',
-            name='branch',
+            name='status',
             field=models.CharField(blank=True, max_length=10),
         ),
     ]
